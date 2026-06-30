@@ -17,9 +17,23 @@ body {
     justify-content: center;
     align-items: center;
 }
+.opener {
+    position: relative;
+    width: 100%;
+}
+
+h1 {
+    position: absolute;
+    font-size: 500%;
+    top: 00px;
+    left: 5%;
+   
+}
+
 .PUM-logo {
     width: 12rem;
 }
 .rendering {
     width: 100%;
+    opacity: 0.5;
 }
