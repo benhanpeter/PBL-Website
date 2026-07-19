@@ -1,9 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body {
     font-family: "Lato", sans-serif;
     display: flex;
     flex-direction: column;
+    width: 100%;
+    margin: 0;
 }
 html {
   font-size: 20px;
@@ -11,37 +18,54 @@ html {
 .header {
     display: flex;
     justify-content: space-between;
-    padding: 0.5rem;
-}
-.header-right {
-    display: flex;
-    gap: 2rem;
-    font-size: 1.5rem;
-    justify-content: center;
-    align-items: center;
-}
+    padding: 0.5rem;}
+    
+    .header-right {
+        display: flex;
+        gap: 2rem;
+        font-size: 1.5rem;
+        justify-content: center;
+        align-items: center;
+    }
+
 .opener {
     position: relative;
-    width: 100%;
-}
+    width: 100%;}
+
 
 h1 {
     position: absolute;
     font-size: 500%;
     top: 00px;
-    left: 5%;
-}
+    left: 5%;}
+
 .about {
     width: 40rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-}
+    justify-content: center;}
+
 .WL-logo {
-    width: 15rem;
-}
+    width: 15rem;}
 .rendering {
     width: 100%;
-    opacity: 0.5;
+    opacity: 0.5;}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: aquamarine;
+    padding: 1rem;  
+    margin: 0%; 
+}
+
+.bottom-left, .bottom-right {
+    display: flex;
+    gap: 2rem;
+}
+.footer img {
+  width: auto;
+  height: 5rem;
+  object-fit: cover;
 }
