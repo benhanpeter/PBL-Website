@@ -5,12 +5,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-a:link, a:visited, a:hover, a:active {
-    color: #000000; 
-    /* text-decoration: none; */}
 
 html {
-    font-size: 20px;
+    font-size: 22px;
     scroll-behavior: smooth;}
 
 body {
@@ -19,72 +16,132 @@ body {
     flex-direction: column;
     width: 100%;
     margin: 0;
-    background-color: #add4e0;
+    background-color: white;
 }
 .header {
     display: flex;
     justify-content: space-between;
-    padding: 0.5rem;}
-    
+    background-color: #1e537b;}
+    .header-left {
+        padding: 0.2rem;    }
     .header-right {
         display: flex;
         gap: 2rem;
         font-size: 1.1rem;
+        color: white;
+        text-decoration: none;
         padding: 2rem;
         justify-content: center;
-        align-items: center;
-    }
+        align-items: center;}
+        .header-right a, .header-right a:visited {
+            color: white;
+            text-decoration: none;}
+
+
 .WL-logo {
-    width: 15rem;}
+    width: 20rem;}
 
 .opener {
-    position: relative;
-    width: 100%;}
-.rendering {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     width: 100%;
-    opacity: 0.6;
-    height: 30rem;
-    object-fit: cover;}
-h1 {
-    position: absolute;
-    font-size: 400%;
-    top: 00px;
-    left: 5%;
-    text-shadow: 4px 4px 4px white;}
+    background-color: #add4e0}
+    .subheader {
+        display: flex;
+        text-align: justify;
+        padding: 1.5rem;}
+    h1 {
+        text-align: center;
+        font-size: 400%;
+        font-weight: 900;
+        text-shadow: 4px 4px 4px white;}
+    .rendering {
+        width: 100%;
+        opacity: 0.6;
+        height: 30rem;
+        object-fit: cover;}
 
 .about {
     width: 40rem;
     display: flex;
     flex-direction: column;
-    margin: 0 auto;}
+    margin: 0 auto;
+    padding: 2rem;}
+    #about {
+        text-align: center;
+        text-decoration: underline;
+        padding: 0.3rem;
+}
 
 .proposed-service {
-    width: 40rem;
+    width: 50rem;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     margin: 0 auto;}
+    .service-text {
+        display: flex;
+        flex-direction: column;
+        text-align: justify;
+        padding: 1.5rem;}
+    #service {
+        text-align: center;
+        text-decoration: underline;
+        padding: 0.3rem;
+}
 
 .history {
-    width: 40rem;
+    width: 50rem;
     display: flex;
     flex-direction: column;
-    margin: 0 auto;}
-
+    margin: 0 auto;
+    }
+    .PBL-history {
+        display: flex;
+        flex-direction: row;
+        padding: 1.5rem;
+    }
+        .PBL-map {
+            width: 30rem;
+        }
+        .PBL-history-text {
+            display: flex;
+            flex-direction: column;
+            text-align: justify;
+            padding: 2.5rem;}
+    .trolley-history {
+        display: flex;
+        flex-direction: row;
+    }
+    #history {
+        text-align: center;
+        text-decoration: underline;
+        padding: 0.3rem;
+}
 .public-engagement {
     width: 40rem;
     display: flex;
     flex-direction: column;
     margin: 0 auto;}
-
+    #engagement {
+        text-align: center;
+        text-decoration: underline;
+        padding: 0.3rem;
+}
 .whats-next {
     width: 40rem;
     display: flex;
     flex-direction: column;
     margin: 0 auto;}
+    #future {
+        text-align: center;
+        text-decoration: underline;
+        padding: 0.3rem;
+}
 .footer {
     display: flex;
     justify-content: space-between;
-    background-color: aquamarine;
+    background-color: #add4e0;
     padding: 1rem;}
 
 .bottom-left, .bottom-right {
