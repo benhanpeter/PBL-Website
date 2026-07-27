@@ -58,31 +58,35 @@ body {
         text-shadow: 4px 4px 4px white;}
     .rendering {
         width: 100%;
-        opacity: 0.6;
+        opacity: 1;
         height: 30rem;
         object-fit: cover;}
 
 .about {
-    width: 40rem;
+    width: 50rem;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    padding: 2rem;}
+    padding: 2rem;
+    line-height: 2;}
     #about {
         text-align: center;
         text-decoration: underline;
         padding: 0.3rem;
+        line-height: 1;
 }
 
 .proposed-service {
     width: 50rem;
     display: flex;
     flex-direction: row;
-    margin: 0 auto;}
+    margin: 0 auto;
+    line-height: 2;}
     .service-text {
         display: flex;
         flex-direction: column;
         text-align: justify;
+        justify-content: center;
         padding: 1.5rem;}
     #service {
         text-align: center;
@@ -91,11 +95,11 @@ body {
 }
 
 .history {
-    width: 50rem;
+    width: 60rem;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    }
+    line-height: 2;}
     .PBL-history {
         display: flex;
         flex-direction: row;
@@ -104,7 +108,12 @@ body {
         .PBL-map {
             width: 30rem;
         }
-        .PBL-history-text {
+        #history {
+            text-align: center;
+            text-decoration: underline;
+            padding: 0.3rem;
+        }
+        .history-text {
             display: flex;
             flex-direction: column;
             text-align: justify;
@@ -112,27 +121,49 @@ body {
     .trolley-history {
         display: flex;
         flex-direction: row;
+        text-align: justify;
     }
+        .trolley-text {
+            padding: 2.5rem;
+        }
+        .Trolley {
+            height: 10px;
+        }
     #history {
         text-align: center;
         text-decoration: underline;
         padding: 0.3rem;
 }
 .public-engagement {
-    width: 40rem;
+    width: 60rem;
     display: flex;
-    flex-direction: column;
-    margin: 0 auto;}
+    flex-direction: row;
+    align-items: center;
+    margin: 0 auto;
+    line-height: 2;}
+     .engagement-text {
+        display: flex;
+        flex-direction: column;
+        text-align: justify;
+        justify-content: center;
+        padding: 1.5rem;
+        }
     #engagement {
         text-align: center;
         text-decoration: underline;
         padding: 0.3rem;
 }
+.event {
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+}
 .whats-next {
-    width: 40rem;
+    width: 50rem;
     display: flex;
     flex-direction: column;
-    margin: 0 auto;}
+    margin: 0 auto;
+    line-height: 2;}
     #future {
         text-align: center;
         text-decoration: underline;
