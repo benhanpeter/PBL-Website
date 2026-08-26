@@ -15,65 +15,15 @@ body {
     font-family: "lato", sans-serif;
     display: flex;
     flex-direction: column;
-    width: 100%;
-    margin: 0;
-    background-color: white;
 }
 
-.header {
-    display: flex;
-    justify-content: space-between;
-    background-color: #1e537b;
-}
-    .header-left {
-        padding: 0.2rem;    
-    }
-    .header-right {
-        display: flex;
-        gap: 2rem;
-        font-size: 1.1rem;
-        color: white;
-        text-decoration: none;
-        padding: 2rem;
-        justify-content: center;
-        align-items: center;
-    }
-        .header-right a, .header-right a:visited {
-            color: white;
-            text-decoration: none;
-        }
-
-
-.WL-logo {
-    width: 20rem;
+a {
+    cursor: pointer;
 }
 
-.opener {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-    background-color: #F1F5F9;
-    padding-bottom: 80px;
-}
-    .subheader {
-        display: flex;
-        text-align: justify;
-        }
-    h1 {
-        text-align: center;
-        font-size: 350%;
-        font-weight: 550;
-        }
-    .opener-text{
-        padding: 1.5rem;
-    }
-    .rendering {
-        width: 100%;
-        opacity: 1;
-        height: 30rem;
-        object-fit: cover;
-    }
+
+
+
 
 .about {
     width: 60rem;
@@ -102,6 +52,7 @@ body {
     }
 
     .WL-route {
+        width: 30rem;
         padding: 1.5rem;
     }
 
@@ -182,11 +133,11 @@ body {
 
 .bottom-left, .bottom-right {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .footer img {
   width: auto;
-  height: 5rem;
+  height: 3rem;
   object-fit: cover;
 }
