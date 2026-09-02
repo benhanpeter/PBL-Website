@@ -7,137 +7,17 @@
 }
 
 html {
-    font-size: 22px;
+    font-size: 20px;
     scroll-behavior: smooth;
+    background-color: #b9ecfa;
 }
 
 body {
-    font-family: "lato", sans-serif;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     flex-direction: column;
 }
 
 a {
     cursor: pointer;
-}
-
-
-
-
-
-.about {
-    width: 60rem;
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    padding: 2rem;
-    line-height: 2;
-    text-align: justify;
-}
-
-
-.proposed-service {
-    width: 60rem;
-    display: flex;
-    flex-direction: row;
-    margin: 0 auto;
-    line-height: 2;
-}
-    .service-text {
-        display: flex;
-        flex-direction: column;
-        text-align: justify;
-        justify-content: center;
-        padding: 1.5rem;
-    }
-
-    .WL-route {
-        width: 30rem;
-        padding: 1.5rem;
-    }
-
-.history {
-    width: 60rem;
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    line-height: 2;
-}
-    .PBL-history {
-        display: flex;
-        flex-direction: row;
-        
-    }
-        .PBL-map {
-            width: 30rem;
-            padding: 1.5rem;
-        }
-
-        .history-text {
-            display: flex;
-            flex-direction: column;
-            text-align: justify;
-            padding: 1.5rem;
-        }
-    .trolley-history {
-        display: flex;
-        flex-direction: row;
-        text-align: justify;
-        }
-        .trolley-text {
-            padding: 1.5rem;
-        }
-        .Trolley {
-            padding: 1.5rem;
-        }
-
-.public-engagement {
-    width: 60rem;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin: 0 auto;
-    line-height: 2;
-}
-     .engagement-text {
-        display: flex;
-        flex-direction: column;
-        text-align: justify;
-        justify-content: center;
-        padding: 1.5rem;
-}
-
-.event {
-    width: 50%;
-    height: 50%;
-    padding: 1.5rem;
-    object-fit: contain;
-}
-
-.whats-next {
-    width: 60rem;
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    line-height: 2;
-    text-align: justify;
-    padding: 1.5rem;
-}
-
-.footer {
-    display: flex;
-    justify-content: space-between;
-    background-color: #add4e0;
-    padding: 1rem;
-}
-
-.bottom-left, .bottom-right {
-    display: flex;
-    gap: 1rem;
-}
-
-.footer img {
-  width: auto;
-  height: 3rem;
-  object-fit: cover;
 }
