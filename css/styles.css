@@ -8,14 +8,35 @@
 
 html {
     font-size: 20px;
-    scroll-behavior: smooth;
-    background-color: #b9ecfa;
+    scroll-behavior: smooth; /* Smooth scroll when selecting menu items */
+    background-image: linear-gradient(
+        to right, 
+        rgba(185, 236, 250, 0.7) 0%,   /* Left edge color and opacity */
+        rgba(122, 226, 255, 0.55) 50%,  /* Center color and opacity */
+        rgba(185, 236, 250, 0.7) 100%  /* Right edge color and opacity */
+        );
 }
 
 body {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     flex-direction: column;
+    position: relative;
+    
+}
+
+.page-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-image: url("../images/Background graphics V2.png");
+    background-repeat:repeat;
+    background-size: 100% auto;
+    will-change: fixed;
+    transform: translateZ(0);
 }
 
 a {

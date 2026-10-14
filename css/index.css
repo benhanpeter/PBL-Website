@@ -35,11 +35,13 @@ h2 {
 main {
     height: 40rem;
     color: white;
-    padding-bottom: 30rem;
-    background-image: url(../images/PBL\ Rendering\ V1\ w\ gradient.png);
+    
+    position: relative;
+    overflow: hidden;
+    /*background-image: url(../images/PBL\ Rendering\ V1\ w\ gradient.png);
     background-size: 100vw;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center;*/
 }
 
 main .main-intro{
@@ -56,28 +58,32 @@ main h1 {
 }
 
 main h2 {
+    font-size: 150%;
     font-weight: 350;
-    line-height: 45px;
+    line-height: 60px;
 }
 
 main a {
     margin-top: 45px;
-    margin-left: 150px;
     font-size: 35px;
     font-weight: bold;
     display: block;
-    background-color: #b9ecfa;
+    background-color: #faa142d8;
     color: black;
     padding: 10px 20px;
     width: fit-content;
+    border: 3px solid black;
     border-radius: 10px;
+    border-color: black; /* this isn't working need to figure out why*/
 }
-main img {
+main img.rendering {
+    position: absolute; /* 4. Pulls the image out of flow so it snaps to the container edges */
+    top: 0;
+    left: 0;
     width: 100%;
-    opacity: 1;
-    height: 30rem;
-    /*transform: scaleX(-1); Commented out, rendering reversed in PPT*/
-    object-fit: cover;
+    height: 100%;       /* 5. Forces it to match the full 40rem height of the main section */
+    object-fit: cover;  /* 6. Behaves exactly like background-size: cover */
+    z-index: -1;         /* Sits cleanly behind the text layer */
 }
 
 .about {
