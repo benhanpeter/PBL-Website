@@ -3,37 +3,42 @@ h2 {
     font-size: 24px;
 }
 
+/* --- Header styling --- */
 .header {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #1e537b;
-    padding: 0.4rem 1rem 0.4rem 0.5rem;
+    padding: 0.4rem 0.8rem 0.4rem 0.5rem;
 }
-    .header-left {
-         padding-top: 0.1rem;
+    .WT-logo { /* Logo styling */
+        height: 3rem;
+        width: auto;
+        aspect-ratio: 3.065 / 1;
+        object-fit: cover;
+        object-position: center;
+        padding-top: 0.1rem;
     }
     .header-right {
         display: flex;
         gap: 2vw;
         font-size: 1.1rem;
         color: white;
-        text-decoration: none;
-        justify-content: center;
         text-align: center;
     }
-        .header-right a, .header-right a:visited {
+        .header-right a, .header-right a:visited { /* Retain font color after user selection */
             color: white;
             text-decoration: none;
         }
 
 
-.WL-logo {
-    width: 10rem;
-}
 
+
+/* --- Hero section styling --- */
 main {
     height: 40rem;
+    width: 100%;
     color: white;
     
     position: relative;
@@ -86,106 +91,81 @@ main img.rendering {
     z-index: -1;         /* Sits cleanly behind the text layer */
 }
 
-.about {
-    width: 60rem;
+/* --- Primary content styling --- */
+.content {
+    width: 80%;
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
-    padding: 2rem;
+    margin: 0 auto; /* Center the div */
     line-height: 2;
-    text-align: justify;
+    padding: 2rem;
+    row-gap: 2rem;
 }
 
+
+ul {
+    list-style: disc;
+    padding: 1rem 0rem 1rem 3rem;
+}
 
 .proposed-service {
-    width: 60rem;
     display: flex;
     flex-direction: row;
-    margin: 0 auto;
-    line-height: 2;
+    column-gap: 3rem;    
 }
-    .service-text {
-        display: flex;
-        flex-direction: column;
-        text-align: justify;
-        justify-content: top;
-        padding: 1.5rem;
+    .WT-route {
+            width: 50%;
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            object-position: top;
+            padding-top: 3rem; /* May need to redo this later */
     }
 
-    .WL-route {
-        width: 30rem;
-        padding: 1.5rem;
-    }
-
-.history {
-    width: 60rem;
+.history { /* History section styling */
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
-    line-height: 2;
+    row-gap: 3rem;
 }
-    .PBL-history {
+    .PBL-history { /* PBL history sub-section styling */
         display: flex;
         flex-direction: row;
-        
+        column-gap: 3rem; 
     }
-        .PBL-map {
-            width: 30rem;
-            padding: 1.5rem;
+        .PBL-map { /* PBL map img styling */
+            width: 50%;
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            object-position: top;
+            padding-top: 3rem; /* May need to redo this later */
        }
-
-        .history-text {
-            display: flex;
-            flex-direction: column;
-            text-align: justify;
-            justify-content: top;
-            padding: 1.5rem;
-        }
-    .trolley-history {
+    .trolley-history { /* Trolley history sub-section styling */
         display: flex;
         flex-direction: row;
-        text-align: justify;
+        column-gap: 3rem; 
         }
-        .trolley-text {
-            padding: 1.5rem;
-        }
-        .Trolley {
-            padding: 1.5rem;
+        .Trolley { /* Trolley img styling */
+            width: 60%;
+            height: auto;
+            aspect-ratio: 1.3 / 1;
+            object-fit: contain;
+            object-position: top;
         }
 
-.public-engagement {
-    width: 60rem;
+.public-engagement { /* Public engagement section styling */
     display: flex;
     flex-direction: row;
-    align-items: center;
-    margin: 0 auto;
-    line-height: 2;
+    column-gap: 3rem;
 }
-     .engagement-text {
-        display: flex;
-        flex-direction: column;
-        text-align: justify;
-        justify-content: center;
-        padding: 1.5rem;
-}
+    .event { /* Event img styling */
+        width: 50%;
+        object-fit: contain;
+        object-position: top;
+        padding-top: 3rem; /* May need to redo this later */
+    }
 
-.event {
-    width: 50%;
-    padding: 1.5rem;
-    padding-bottom: 13rem;
-    object-fit: contain;
-}
-
-.whats-next {
-    width: 60rem;
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    line-height: 2;
-    text-align: justify;
-    padding: 1.5rem;
-}
-
+/* --- Footer styling --- */
 .footer {
     display: flex;
     justify-content: space-between;
