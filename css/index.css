@@ -5,7 +5,8 @@ h2 {
 
 /* --- Header styling --- */
 .header {
-    width: 100%;
+    width: 100vw;
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -41,13 +42,8 @@ main {
     height: 40rem;
     width: 100%;
     color: white;
-    
     position: relative;
     overflow: hidden;
-    /*background-image: url(../images/PBL\ Rendering\ V1\ w\ gradient.png);
-    background-size: 100vw;
-    background-repeat: no-repeat;
-    background-position: center;*/
 }
 
 main .main-intro{
@@ -69,7 +65,7 @@ main h2 {
     line-height: 60px;
 }
 
-main a {
+main a {                /* Action button */
     margin-top: 45px;
     font-size: 35px;
     font-weight: bold;
@@ -80,7 +76,7 @@ main a {
     width: fit-content;
     border: 3px solid black;
     border-radius: 10px;
-    border-color: black; /* this isn't working need to figure out why*/
+    border-color: black; 
 }
 main img.rendering {
     position: absolute; /* 4. Pulls the image out of flow so it snaps to the container edges */
@@ -179,6 +175,11 @@ ul {
     gap: 1.5rem;
 }
 
+.footer-right a {
+    display: flex;
+    align-items: center; /*Vertical alignment of imgs inside footer-right; required due to a tags*/
+}
+
 .footer img {
     height: 3rem;
 }
@@ -191,7 +192,9 @@ ul {
 .burger-menu, .burger-menu-btn {
     display: none;
 }
-/* Mobile Version */
+
+/* ------ Mobile Version ------ */
+/* <600px, 601px, 768px, 992px, 1200px */
 
 @media only screen and (max-width: 600px) {
 
@@ -208,37 +211,140 @@ ul {
     .burger-menu {
         display: none;
         position: fixed;
-        width: 100%;
+        width: 100vw;
         height: 100vh;
         z-index: 900;
-        background-color: #111;
+        background-color: #06253d;
     }
 
     .burger-menu ul {
         width: 100%;
         height: calc(100vh - 80px);
-        padding-top: 80px;
+        padding-top: 80px; /* Move below header */
+        padding-left: 0; /* Remove browser default padding */
         display: flex;
         flex-wrap: wrap;
         align-content: flex-start;
+        list-style-type: none; /* Remove bullets */
     }
 
     .burger-menu ul li{
         flex-basis: 100%;
-        border-top: 2px solid #000;
-        color: white;
+        border-top: 2px solid #ffffff; /* Border above each menu item */
+        color: white; /* Font color */
     }
 
+    .burger-menu ul li:last-child {
+        border-bottom: 2px solid #ffffff; /* Border below last menu item */
+    }
+    
     .burger-menu ul li a{
         display: block;
-        height: 100%;
-        font-size: 2rem;
+        font-size: 1.3rem;
         padding: 30px 0;
-        flex-basis: 100%;
         text-align: center;
     }
 
     .header-right {
         display: none; /* Remove header navigation links */
     }
+
+/* --- Hero section styling --- */
+
+    main {
+    min-height: calc(100dvh - 80px); /* 100% of viewport minus header height */
+    height: auto;
+    padding-top: 80px; /*Using "top" moved down background too, revisit*/
+    position: relative;
+    overflow: visible;
+}
+
+main .main-intro{
+    padding: 0rem 1rem;
+    position: relative;
+    left: 0;
+    top: 0;
+}
+
+main h1 {
+    font-size: 250%;
+    line-height: 70px;
+    text-align: center;
+}
+
+main h2 {
+    font-size: 150%;
+    line-height: 50px;
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+main a {                /* Action button */
+    margin: 0 auto;
+    font-size: 30px; 
+}
+
+/* --- Primary content styling --- */
+.content {
+    width: 100%; /* Full width */
+    line-height: 1.8; /* Reduced */
+    padding: 1rem; /* Reduced */
+    row-gap: 1rem; /* Not sure what this impacts */
+    font-size: 80%; /* Reduced */
+}
+
+
+ul {
+    padding: 0.8rem 0rem 0.8rem 2rem; /* Reduced */
+}
+
+.proposed-service {
+    display: flex;
+    flex-direction: column; /* Changed from row to column */
+    row-gap: 1rem; /* Changed from column to row, reduced */
+}
+    .WT-route {
+            width: 100%; /* Increased */
+            padding-top: 0rem; /* Reduced */
+    }
+
+.history { /* History section styling */
+    row-gap: 1rem; /* Reduced */
+}
+    .PBL-history { /* PBL history sub-section styling */
+        flex-direction: column-reverse; /* Changed from row to column-reverse */
+        row-gap: 1rem; /* Changed from column to row, reduced */
+    }
+        .PBL-map { /* PBL map img styling */
+            width: 100%; /* Increased */
+            padding-top: 0rem; /* Reduced */
+       }
+    .trolley-history { /* Trolley history sub-section styling */
+        flex-direction: column; /* Changed from row to column */
+        row-gap: 1rem; /* Changed from column to row, reduced */
+        }
+        .Trolley { /* Trolley img styling */
+            width: 100%; /* Increased */
+        }
+    
+.public-engagement { /* Public engagement section styling */
+    flex-direction: column-reverse; /* Changed from row to column */
+    row-gap: 1rem; /* Changed from column to row, reduced */
+}
+    .event { /* Event img styling */
+        width: 100%; /* Increased */
+        padding-top: 1rem; /* Reduced */
+    }
+
+/* --- Footer styling --- */
+.footer {
+    padding: 0.5rem; /*Reduced*/
+}
+.footer-left, .footer-right {
+    gap: 1rem; /*Reduced, revisit later*/
+}
+.footer img {
+    height: 2rem; /*Reduced*/
+}
+
 }
