@@ -5,7 +5,7 @@ h2 {
 
 /* --- Header styling --- */
 .header {
-    width: 100vw;
+    width: 100%;
     position: fixed;
     display: flex;
     justify-content: space-between;
@@ -41,16 +41,19 @@ h2 {
 main {
     height: 40rem;
     width: 100%;
+    margin-top: 3.8rem;
     color: white;
     position: relative;
     overflow: hidden;
 }
 
 main .main-intro{
+    width: 37rem;
     padding: 1.5rem;
     position: relative;
-    top: 2.5rem;
-    left: 7vw
+    top: 4rem;
+    left: 7vw;
+    z-index: 1; 
 }
 
 main h1 {
@@ -88,17 +91,26 @@ main img.rendering {
     z-index: -1;         /* Sits cleanly behind the text layer */
 }
 
+
 /* --- Primary content styling --- */
 .content {
     width: 80%;
+    max-width: 850px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     margin: 0 auto; /* Center the div */
     line-height: 2;
     padding: 2rem;
     row-gap: 2rem;
 }
 
+.about {
+    max-width: 850px;
+    /*display: flex;
+    flex-direction: column;
+    align-items: center;*/
+}
 
 ul {
     list-style: disc;
@@ -107,16 +119,17 @@ ul {
 
 .proposed-service {
     display: flex;
-    flex-direction: row;
-    column-gap: 3rem;    
+    flex-direction: column;
+    row-gap: 0.5rem;    
+    align-items: center;
 }
     .WT-route {
-            width: 50%;
+            width: 75%;
             height: auto;
             aspect-ratio: 1 / 1;
             object-fit: contain;
             object-position: top;
-            padding-top: 3rem; /* May need to redo this later */
+            padding-top: 0rem; /* May need to redo this later */
     }
 
 .history { /* History section styling */
@@ -151,17 +164,26 @@ ul {
         }
 
 .public-engagement { /* Public engagement section styling */
-    display: flex;
+    /*display: flex;
     flex-direction: row;
-    column-gap: 3rem;
+    column-gap: 3rem;*/
+    width: 100%;
+    
+    margin: 0 auto;    
 }
     .event { /* Event img styling */
-        width: 50%;
+        /*width: 50%;
         object-fit: contain;
         object-position: top;
-        padding-top: 3rem; /* May need to redo this later */
+        padding-top: 3rem; */ /* May need to redo this later */
+        float: left;
+    width: 50%;               /* Adjust as needed */
+    height: auto;
+    margin-right: 2rem;        /* Space between image and text on the right */
+    margin-bottom: 0rem;     /* Space between image and text underneath */
     }
 
+    
 /* --- Footer styling --- */
 .footer {
     display: flex;
@@ -193,74 +215,32 @@ ul {
     display: none;
 }
 
+
+/* ---------------------------- */
+/* ---------------------------- */
 /* ------ Mobile Version ------ */
+/* ---------------------------- */
+/* ---------------------------- */
 /* <600px, 601px, 768px, 992px, 1200px */
 
+
+/*                         ^^--------^^*/
+/*     1200   992   768   601   360   0*/
+
 @media only screen and (max-width: 600px) {
-
-    .burger-menu-btn {
-        display: block;
-        width: 50px;
-        height: 50px;
-        background-image: url(/images/Burger\ menu.png), url(/images/Close.png);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center, center left 50px; 
-    }
-
-    .burger-menu {
-        display: none;
-        position: fixed;
-        width: 100vw;
-        height: 100vh;
-        z-index: 900;
-        background-color: #06253d;
-    }
-
-    .burger-menu ul {
-        width: 100%;
-        height: calc(100vh - 80px);
-        padding-top: 80px; /* Move below header */
-        padding-left: 0; /* Remove browser default padding */
-        display: flex;
-        flex-wrap: wrap;
-        align-content: flex-start;
-        list-style-type: none; /* Remove bullets */
-    }
-
-    .burger-menu ul li{
-        flex-basis: 100%;
-        border-top: 2px solid #ffffff; /* Border above each menu item */
-        color: white; /* Font color */
-    }
-
-    .burger-menu ul li:last-child {
-        border-bottom: 2px solid #ffffff; /* Border below last menu item */
-    }
-    
-    .burger-menu ul li a{
-        display: block;
-        font-size: 1.3rem;
-        padding: 30px 0;
-        text-align: center;
-    }
-
-    .header-right {
-        display: none; /* Remove header navigation links */
-    }
 
 /* --- Hero section styling --- */
 
     main {
     min-height: calc(100dvh - 80px); /* 100% of viewport minus header height */
     height: auto;
-    padding-top: 80px; /*Using "top" moved down background too, revisit*/
     position: relative;
     overflow: visible;
 }
 
 main .main-intro{
-    padding: 0rem 1rem;
+    width: 100%;
+    padding: 1rem 1rem 0rem 1rem;
     position: relative;
     left: 0;
     top: 0;
@@ -268,13 +248,13 @@ main .main-intro{
 
 main h1 {
     font-size: 250%;
-    line-height: 70px;
+    line-height: 60px;
     text-align: center;
 }
 
 main h2 {
     font-size: 150%;
-    line-height: 50px;
+    line-height: 45px;
     text-align: center;
     margin-bottom: 45px;
 }
@@ -343,8 +323,114 @@ ul {
 .footer-left, .footer-right {
     gap: 1rem; /*Reduced, revisit later*/
 }
-.footer img {
-    height: 2rem; /*Reduced*/
+
+
 }
 
+/*                               ^^--^^*/
+/*     1200   992   768   601   360   0*/
+
+@media only screen and (max-width: 360px) {
+    .footer img {
+        height: 1.45rem; /*Reduced most for edge case narrow screens*/
+    }
+}
+
+/*                         ^^---^^     */
+/*     1200   992   768   601   360   0*/
+
+@media only screen and (min-width: 361px) and (max-width: 600px) {
+    .footer img {
+        height: 1.7rem; /*Reduced*/
+    }
+}
+
+/*            ^^----------^^           */
+/*     1200   992   768   601   360   0*/
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+    /* --- Footer styling --- */
+    .footer {
+        padding: 0.75rem; /*Reduced*/
+    }
+    .footer-left, .footer-right {
+        gap: 1.25rem; /*Reduced, revisit later*/
+    }
+        .footer img {
+        height: 2.5rem; /*Reduced*/
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    
+}
+
+/*            ^^---------------------^^*/
+/*     1200   992   768   601   360   0*/
+@media only screen and (max-width: 992px) {
+     .burger-menu-btn { /* Apply burger menu to all mobile devices */
+        display: block;
+        width: 50px;
+        height: 50px;
+        background-image: url(/images/Burger\ menu.png), url(/images/Close.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center, center left 50px; 
+    }
+
+    .burger-menu {
+        display: none;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        z-index: 900;
+        background-color: #06253d;
+    }
+
+    .burger-menu ul {
+        width: 100%;
+        height: calc(100vh - 80px);
+        padding-top: 80px; /* Move below header */
+        padding-left: 0; /* Remove browser default padding */
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        list-style-type: none; /* Remove bullets */
+    }
+
+    .burger-menu ul li{
+        flex-basis: 100%;
+        border-top: 2px solid #ffffff; /* Border above each menu item */
+        color: white; /* Font color */
+    }
+
+    .burger-menu ul li:last-child {
+        border-bottom: 2px solid #ffffff; /* Border below last menu item */
+    }
+    
+    .burger-menu ul li a{
+        display: block;
+        font-size: 1.3rem;
+        padding: 30px 0;
+        text-align: center;
+    }
+
+    .header-right {
+        display: none; /* Remove header navigation links */
+    }
+}
+
+/*      ^^---------------------------^^*/
+/*     1200   992   768   601   360   0*/
+@media only screen and (max-width: 1200px) {
+    main::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.15); /* Add black gradient to image at widths where hero section text overlays lighter parts of the image, hurting readability */
+    z-index: 0; /* Sits above the image (-1) and below the text (1) */
+    pointer-events: none; /* Allows clicks to pass through to elements underneath */
+}
 }
