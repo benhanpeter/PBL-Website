@@ -9,6 +9,7 @@
 html {
     font-size: 20px;
     scroll-behavior: smooth; /* Smooth scroll when selecting menu items */
+    scroll-padding-top: 5rem;
     background-image: linear-gradient(
         to right, 
         rgba(185, 236, 250, 0.7) 0%,   /* Left edge color and opacity */

@@ -11,7 +11,7 @@ h2 {
     justify-content: space-between;
     align-items: center;
     background-color: #1e537b;
-    padding: 0.4rem 0.8rem 0.4rem 0.5rem;
+    padding: 1rem;
     z-index: 1000;
 }
     .WT-logo { /* Logo styling */
@@ -20,7 +20,6 @@ h2 {
         aspect-ratio: 3.065 / 1;
         object-fit: cover;
         object-position: center;
-        padding-top: 0.1rem;
     }
     .header-right {
         display: flex;
@@ -34,14 +33,11 @@ h2 {
             text-decoration: none;
         }
 
-
-
-
 /* --- Hero section styling --- */
 main {
     height: 40rem;
     width: 100%;
-    margin-top: 3.8rem;
+    margin-top: 5rem;
     color: white;
     position: relative;
     overflow: hidden;
@@ -91,7 +87,6 @@ main img.rendering {
     z-index: -1;         /* Sits cleanly behind the text layer */
 }
 
-
 /* --- Primary content styling --- */
 .content {
     width: 80%;
@@ -102,14 +97,7 @@ main img.rendering {
     margin: 0 auto; /* Center the div */
     line-height: 2;
     padding: 2rem;
-    row-gap: 2rem;
-}
-
-.about {
-    max-width: 850px;
-    /*display: flex;
-    flex-direction: column;
-    align-items: center;*/
+    row-gap: 0.5rem;
 }
 
 ul {
@@ -128,32 +116,33 @@ ul {
             height: auto;
             aspect-ratio: 1 / 1;
             object-fit: contain;
-            object-position: top;
-            padding-top: 0rem; /* May need to redo this later */
     }
 
 .history { /* History section styling */
     display: flex;
     flex-direction: column;
-    row-gap: 3rem;
+    row-gap: 0.5rem;
+    align-items: center;
 }
     .PBL-history { /* PBL history sub-section styling */
         display: flex;
-        flex-direction: row;
-        column-gap: 3rem; 
+        flex-direction: column;
+        row-gap: 0.5rem; 
+        align-items: center;
     }
         .PBL-map { /* PBL map img styling */
-            width: 50%;
+            width: 70%;
             height: auto;
             aspect-ratio: 1 / 1;
             object-fit: contain;
             object-position: top;
-            padding-top: 3rem; /* May need to redo this later */
+            
        }
     .trolley-history { /* Trolley history sub-section styling */
         display: flex;
-        flex-direction: row;
-        column-gap: 3rem; 
+        flex-direction: column;
+        row-gap: 0.5rem;
+        align-items: center; 
         }
         .Trolley { /* Trolley img styling */
             width: 60%;
@@ -164,26 +153,16 @@ ul {
         }
 
 .public-engagement { /* Public engagement section styling */
-    /*display: flex;
-    flex-direction: row;
-    column-gap: 3rem;*/
-    width: 100%;
-    
-    margin: 0 auto;    
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.5rem;
+        align-items: center;    
 }
     .event { /* Event img styling */
-        /*width: 50%;
-        object-fit: contain;
-        object-position: top;
-        padding-top: 3rem; */ /* May need to redo this later */
-        float: left;
-    width: 50%;               /* Adjust as needed */
+    width: 60%;
     height: auto;
-    margin-right: 2rem;        /* Space between image and text on the right */
-    margin-bottom: 0rem;     /* Space between image and text underneath */
     }
 
-    
 /* --- Footer styling --- */
 .footer {
     display: flex;
@@ -223,16 +202,37 @@ ul {
 /* ---------------------------- */
 /* <600px, 601px, 768px, 992px, 1200px */
 
+/*                               ^^--^^*/
+/*     1200   992   768   601   360   0*/
+@media only screen and (max-width: 360px) {
+    .footer img {
+        height: 1.45rem; /*Reduced most for edge case narrow screens*/
+    }
+}
 
 /*                         ^^--------^^*/
 /*     1200   992   768   601   360   0*/
-
 @media only screen and (max-width: 600px) {
 
-/* --- Hero section styling --- */
+html {
+    scroll-padding-top: 3.5rem; /* Reduced */
+}
 
-    main {
+.burger-menu ul {
+    padding-top: 3.5rem; /* Move below header */
+}
+
+.header {
+    padding: 0.5rem;
+}
+
+.WT-logo { /* Logo styling */
+    height: 2rem;
+}
+
+    main { /* --- Hero section styling --- */
     min-height: calc(100dvh - 80px); /* 100% of viewport minus header height */
+    margin-top: 3rem;
     height: auto;
     position: relative;
     overflow: visible;
@@ -270,7 +270,7 @@ main a {                /* Action button */
     line-height: 1.8; /* Reduced */
     padding: 1rem; /* Reduced */
     row-gap: 1rem; /* Not sure what this impacts */
-    font-size: 80%; /* Reduced */
+    font-size: 90%; /* Reduced */
 }
 
 
@@ -291,10 +291,6 @@ ul {
 .history { /* History section styling */
     row-gap: 1rem; /* Reduced */
 }
-    .PBL-history { /* PBL history sub-section styling */
-        flex-direction: column-reverse; /* Changed from row to column-reverse */
-        row-gap: 1rem; /* Changed from column to row, reduced */
-    }
         .PBL-map { /* PBL map img styling */
             width: 100%; /* Increased */
             padding-top: 0rem; /* Reduced */
@@ -307,10 +303,6 @@ ul {
             width: 100%; /* Increased */
         }
     
-.public-engagement { /* Public engagement section styling */
-    flex-direction: column-reverse; /* Changed from row to column */
-    row-gap: 1rem; /* Changed from column to row, reduced */
-}
     .event { /* Event img styling */
         width: 100%; /* Increased */
         padding-top: 1rem; /* Reduced */
@@ -323,45 +315,25 @@ ul {
 .footer-left, .footer-right {
     gap: 1rem; /*Reduced, revisit later*/
 }
-
-
-}
-
-/*                               ^^--^^*/
-/*     1200   992   768   601   360   0*/
-
-@media only screen and (max-width: 360px) {
-    .footer img {
-        height: 1.45rem; /*Reduced most for edge case narrow screens*/
-    }
 }
 
 /*                         ^^---^^     */
 /*     1200   992   768   601   360   0*/
-
 @media only screen and (min-width: 361px) and (max-width: 600px) {
     .footer img {
         height: 1.7rem; /*Reduced*/
     }
 }
 
-/*            ^^----------^^           */
+/*                  ^^----^^           */
 /*     1200   992   768   601   360   0*/
-@media only screen and (min-width: 601px) and (max-width: 992px) {
+@media only screen and (min-width: 601px) and (max-width: 767px) {
     /* --- Footer styling --- */
-    .footer {
-        padding: 0.75rem; /*Reduced*/
+    .content {
+        width: 95%;
+        padding: 1rem;    
     }
-    .footer-left, .footer-right {
-        gap: 1.25rem; /*Reduced, revisit later*/
-    }
-        .footer img {
-        height: 2.5rem; /*Reduced*/
-    }
-}
 
-@media only screen and (min-width: 768px) {
-    
 }
 
 /*            ^^---------------------^^*/
@@ -389,7 +361,7 @@ ul {
     .burger-menu ul {
         width: 100%;
         height: calc(100vh - 80px);
-        padding-top: 80px; /* Move below header */
+        padding-top: 3.5rem; /* Move below header */
         padding-left: 0; /* Remove browser default padding */
         display: flex;
         flex-wrap: wrap;
@@ -416,6 +388,35 @@ ul {
 
     .header-right {
         display: none; /* Remove header navigation links */
+    }
+}
+
+/*            ^^----------^^           */
+/*     1200   992   768   601   360   0*/
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+    /* --- Footer styling --- */
+    .burger-menu ul {
+        padding-top: 5.3rem; /* Move below header */
+    }
+
+    .footer {
+        padding: 0.75rem; /*Reduced*/
+    }
+    .footer-left, .footer-right {
+        gap: 1.25rem; /*Reduced, revisit later*/
+    }
+        .footer img {
+        height: 2.5rem; /*Reduced*/
+    }
+}
+
+/*            ^^----^^                 */
+/*     1200   992   768   601   360   0*/
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    /* --- Footer styling --- */
+    .content {
+        width: 90%;
+        padding: 1.5rem;
     }
 }
 
