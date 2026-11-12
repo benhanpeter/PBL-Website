@@ -9,7 +9,7 @@
 html {
     font-size: 20px;
     scroll-behavior: smooth; /* Smooth scroll when selecting menu items */
-    scroll-padding-top: 5rem;
+    scroll-padding-top: 5rem; /* Ensure manu items not hidden behind header, which is fixed on top of body */
     background-image: linear-gradient(
         to right, 
         rgba(185, 236, 250, 0.7) 0%,   /* Left edge color and opacity */
@@ -32,7 +32,7 @@ body {
     right: 0;
     bottom: 0;
     z-index: -1;
-    background-image: url("../images/Background graphics V2.png");
+    background-image: url("../images/Background graphics.png");
     background-repeat:repeat;
     background-size: 100% auto;
     will-change: fixed;
