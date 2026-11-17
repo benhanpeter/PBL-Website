@@ -6,22 +6,24 @@ h2 {
 /* --- Header styling --- */
 .header {
     width: 100%;
+    
     position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #1e537b;
-    padding: 1rem;
+    padding: 0.5rem;
     z-index: 1000;
+    transition: padding 0.3s ease;
 }
     .WT-logo { /* Logo styling */
-        height: 3rem;
+        height: 5rem;
         width: auto;
-        /*aspect-ratio: 3.065 / 1;*/
         object-fit: cover;
         object-position: center;
+        transition: padding 0.3s ease;
     }
-    .header-right {
+    nav {
         display: flex;
         gap: 2vw;
         font-size: 1.1rem;
@@ -32,6 +34,14 @@ h2 {
             color: white;
             text-decoration: none;
         }
+
+    #header.scrolled {
+        padding: 0.3rem; /* Reduced vertical padding */
+    }
+
+    #header.scrolled .WT-logo {
+        height: 4rem; /* Slightly smaller logo text */
+    }
 
 /* --- Hero section styling --- */
 main {
@@ -59,9 +69,9 @@ main {
         font-size: 150%;
         font-weight: 350;
         line-height: 60px;
+        margin-bottom: 45px;
     }
     main a {                /* Action button */
-        margin-top: 45px;
         font-size: 35px;
         font-weight: bold;
         display: block;
@@ -215,6 +225,7 @@ main {
 /*                               ^^--^^*/
 /*     1200   992   768   601   360   0*/
 @media only screen and (max-width: 360px) {
+
     .footer img {
         height: 1.45rem; /*Reduced most for edge case narrow screens*/
     }
@@ -232,14 +243,6 @@ html {
     padding-top: 3.5rem; /* Move below header */
 }
 
-.header {
-    padding: 0.5rem;
-}
-
-.WT-logo { /* Logo styling */
-    height: 2rem;
-}
-
 
 
 /* --- Primary content styling --- */
@@ -250,7 +253,6 @@ html {
     row-gap: 1rem; /* Not sure what this impacts */
     font-size: 90%; /* Reduced */
 }
-
 
 ul {
     padding: 0.8rem 0rem 0.8rem 2rem; /* Reduced */
@@ -306,44 +308,64 @@ ul {
 /*                  ^^---------------^^*/
 /*     1200   992   768   601   360   0*/
 @media only screen and (max-width: 768px) {
-main { /* --- Hero section styling --- */
-    min-height: calc(100dvh - 80px); /* 100% of viewport minus header height */
-    margin-top: 3rem;
-    height: auto;
-    position: relative;
-    overflow: visible;
-}
-    main .main-intro{
-        width: 100%;
-        padding: 1rem 1rem 0rem 1rem;
-        position: relative;
-        left: 0;
-        top: 0;
+    .WT-logo { /* Logo styling */
+        height: 3rem; /*Reduced*/
     }
-    main h1 {
-        font-size: 250%; /* Reduced */
+
+    #header.scrolled {
+        padding: 0.3rem; /*Reduced*/
+    }
+
+    #header.scrolled .WT-logo {
+        height: 2.5rem; /*Reduced*/
+    }
+    
+    main { /* --- Hero section styling --- */
+        min-height: calc(100dvh - 80px); /* 100% of viewport minus header height */
+        margin-top: 4rem; /*Reduced*/
+        height: auto;
+        overflow: visible;
+    }
+    main .main-intro{
+        width: 100%; /*Increased*/
+        padding: 1rem 1rem 0rem 1rem; /*Reduced*/
+        left: 0; /*Move all the way left*/
+        top: 0; /*Move all the way to top*/
+    }
+
+        main h1 {
+        font-size: 225%; /* Reduced */
         line-height: 60px; /* Reduced */
         text-align: center; /* Changed from left (default) */
+        margin-bottom: 2dvh;
     }
     main h2 {
-        font-size: 150%; /* Reduced */
+        font-size: 125%; /* Reduced */
         line-height: 45px; /* Reduced */
         text-align: center; /* Changed from left (default) */
-        margin-bottom: 45px;
+        margin-bottom: 2dvh;
     }
-    main a {                /* Action button */
+
+    main a {    /* Action button */
         margin: 0 auto;
         font-size: 30px; /* Reduced */
+    }
+
+    .content img {
+        width: 100%; /*Increase*/
+    }
+
+    .trolley-img-wrapper {
+        width: 100%; /*Increase*/
     }
 }
 
 /*                  ^^----^^           */
 /*     1200   992   768   601   360   0*/
 @media only screen and (min-width: 601px) and (max-width: 767px) {
-    /* --- Footer styling --- */
     .content {
-        width: 95%;
-        padding: 1rem;    
+        width: 95%; /*Increased*/
+        padding: 1rem; /*Reduced*/
     }
 
 }
@@ -398,7 +420,7 @@ main { /* --- Hero section styling --- */
         text-align: center;
     }
 
-    .header-right {
+    nav {
         display: none; /* Remove header navigation links */
     }
 }
@@ -406,7 +428,6 @@ main { /* --- Hero section styling --- */
 /*            ^^----------^^           */
 /*     1200   992   768   601   360   0*/
 @media only screen and (min-width: 601px) and (max-width: 992px) {
-    /* --- Footer styling --- */
     .burger-menu ul {
         padding-top: 5.3rem; /* Move below header */
     }
@@ -414,21 +435,20 @@ main { /* --- Hero section styling --- */
     .footer {
         padding: 0.75rem; /*Reduced*/
     }
-    .footer-left, .footer-right {
-        gap: 1.25rem; /*Reduced, revisit later*/
-    }
+        .footer-left, .footer-right {
+            gap: 1.25rem; /*Reduced, revisit later*/
+        }
         .footer img {
-        height: 2.5rem; /*Reduced*/
-    }
+            height: 2.5rem; /*Reduced*/
+        }
 }
 
 /*            ^^----^^                 */
 /*     1200   992   768   601   360   0*/
 @media only screen and (min-width: 768px) and (max-width: 992px) {
-    /* --- Footer styling --- */
     .content {
-        width: 90%;
-        padding: 1.5rem;
+        width: 90%; /*Increased*/
+        padding: 1.5rem; /*Reduced*/
     }
 }
 

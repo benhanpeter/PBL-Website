@@ -1,3 +1,4 @@
+// Burger menu
 let burgerBtn = document.querySelector(".burger-menu-btn");
 let burgerMenu = document.querySelector(".burger-menu");
 let menuLinks = document.querySelectorAll(".burger-menu a");
@@ -33,3 +34,15 @@ menuLinks.forEach(function (link) {
         closeMenu();
     };
 });
+
+// Create Scrolled state after 50px
+const header = document.getElementById("header");
+const scrollThreshold = 50; // Pixels scrolled before shrinking
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > scrollThreshold) {
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
+  }
+}, { passive: true });
