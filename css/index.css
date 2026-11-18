@@ -6,7 +6,6 @@ h2 {
 /* --- Header styling --- */
 .header {
     width: 100%;
-    
     position: fixed;
     display: flex;
     justify-content: space-between;
@@ -114,6 +113,13 @@ main {
     row-gap: 0.5rem;
 }
 
+.content a {
+    text-decoration: underline;
+}
+
+.content img {
+    margin: 1rem 0; /*Margin to top and bottom of all imgs*/
+}
     ul {
         list-style: disc;
         padding: 1rem 0rem 1rem 3rem;
@@ -128,7 +134,6 @@ main {
         .proposed-service img {
             width: 75%;
             height: auto;
-            aspect-ratio: 1 / 1;
             object-fit: contain;
         }
 
@@ -147,7 +152,6 @@ main {
             .PBL-history img { /* PBL map img styling */
                 width: 70%;
                 height: auto;
-                aspect-ratio: 1 / 1;
                 object-fit: contain;
                 object-position: top;  
             }
@@ -161,7 +165,8 @@ main {
             .trolley-img-wrapper {
                 position: relative;
                 width: 60%;
-                overflow: hidden;        
+                overflow: hidden;
+                margin: 1rem 0; /*Margin applied to img wrapper, not img itself*/     
             }
             .trolley-history img { /* Trolley img styling */
                 width: 100%;
@@ -169,6 +174,7 @@ main {
                 object-fit: contain;
                 object-position: top;
                 display: block;
+                margin: 0; /*Remove margin from trolley img, due to background color applied*/
             }
             .trolley-img-wrapper::after { /*Apply tint to image*/
                 content: "";
@@ -199,6 +205,7 @@ main {
     .footer-left, .footer-right {
         display: flex;
         gap: 1.5rem;
+        color: white;
     }
     .footer-right a {
         display: flex;
@@ -243,57 +250,52 @@ html {
     padding-top: 3.5rem; /* Move below header */
 }
 
-
-
 /* --- Primary content styling --- */
 .content {
     width: 100%; /* Full width */
-    line-height: 1.8; /* Reduced */
-    padding: 1rem; /* Reduced */
-    row-gap: 1rem; /* Not sure what this impacts */
+    line-height: 1.6; /* Reduced */
+    padding: 0.7rem; /* Reduced */
+    row-gap: 0.5rem; /* Reduced */
     font-size: 90%; /* Reduced */
 }
 
+.content img {
+    margin: 0.3rem 0; /*Margin to top and bottom of all imgs*/
+    width: 100%; /*Increased*/
+}
+
 ul {
-    padding: 0.8rem 0rem 0.8rem 2rem; /* Reduced */
+    padding: 0.5rem 0rem 0.5rem 2rem; /* Reduced */
 }
 
 .proposed-service {
     display: flex;
     flex-direction: column; /* Changed from row to column */
-    row-gap: 1rem; /* Changed from column to row, reduced */
+    row-gap: 0.5rem; /* Changed from column to row, reduced */
 }
-    .WT-route {
-            width: 100%; /* Increased */
-            padding-top: 0rem; /* Reduced */
-    }
 
 .history { /* History section styling */
-    row-gap: 1rem; /* Reduced */
+    row-gap: 0.5rem; /* Reduced */
 }
-        .PBL-map { /* PBL map img styling */
-            width: 100%; /* Increased */
-            padding-top: 0rem; /* Reduced */
-       }
+
     .trolley-history { /* Trolley history sub-section styling */
         flex-direction: column; /* Changed from row to column */
-        row-gap: 1rem; /* Changed from column to row, reduced */
+        row-gap: 0.5rem; /* Changed from column to row, reduced */
         }
-        .Trolley { /* Trolley img styling */
-            width: 100%; /* Increased */
+        .trolley-img-wrapper {
+            margin: 0.3rem 0; /*Margin applied to img wrapper, not img itself*/     
         }
-    
-    .event { /* Event img styling */
-        width: 100%; /* Increased */
-        padding-top: 1rem; /* Reduced */
-    }
 
 /* --- Footer styling --- */
 .footer {
     padding: 0.5rem; /*Reduced*/
+    flex-direction: column-reverse;
+    row-gap: 0.2rem;
+    align-items: center;
 }
 .footer-left, .footer-right {
     gap: 1rem; /*Reduced, revisit later*/
+    font-size: 60%;
 }
 }
 
@@ -321,7 +323,7 @@ ul {
     }
     
     main { /* --- Hero section styling --- */
-        min-height: calc(100dvh - 80px); /* 100% of viewport minus header height */
+        min-height: calc(100svh - 80px); /* 100% of viewport minus header height */
         margin-top: 4rem; /*Reduced*/
         height: auto;
         overflow: visible;
@@ -436,10 +438,14 @@ ul {
         padding: 0.75rem; /*Reduced*/
     }
         .footer-left, .footer-right {
-            gap: 1.25rem; /*Reduced, revisit later*/
+            gap: 0.75rem; /*Reduced, revisit later*/
+            font-size: 75%;
+        }
+        .footer-left {
+            max-width: 7rem;
         }
         .footer img {
-            height: 2.5rem; /*Reduced*/
+            height: 2.25rem; /*Reduced*/
         }
 }
 
